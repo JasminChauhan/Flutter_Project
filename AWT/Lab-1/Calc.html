@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="rform">
+ <input type="text" name="fnum"/>
+    <input type="text" name="snum"/>
+    <input type="text" name="operation"/>
+    <button type="submit" onclick="calculate()">Operate</button>
+    </form>
+   
+    <script>
+        function calculate() {
+            const fnum = parseInt(document.rform.fnum.value);
+            console.log(fnum);
+            const snum = parseInt(document.rform.snum.value);
+            console.log(snum);
+            const op = document.rform.operation.value;
+            console.log(op);
+            
+
+            switch(op) {
+                case "+": 
+                    document.write(eval("fnum + snum"));
+                    break;
+                case "-": 
+                    document.write(eval("fnum - snum"));
+                    break;
+                case "*": 
+                    document.write(eval("fnum * snum"));
+                    break;
+                case "/": 
+                    document.write(eval("fnum / snum"));
+                    break;
+                case "%": 
+                    document.write(eval("fnum % snum"));
+                    break;
+                default:
+                    document.write("Enter Valid Operation!!");
+                    break;
+            }
+
+        }
+    </script>
+</body>
+</html>
